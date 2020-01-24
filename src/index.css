@@ -11,3 +11,94 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.header{
+  width: 100%;
+  height: 50px;
+  margin: 0px;
+  background-color: gold;
+}
+
+.menu{
+  margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.logo{
+  margin-left: 50px;
+  margin-right: auto;
+  color:gray;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.logo p:hover{
+ color: green;
+ transition: 2s;
+}
+
+.logo p{
+  font-size: 25px;
+  margin: 0px;
+  padding: 3px;
+}
+
+.products{
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 400px;
+}
+
+.products li p{
+  padding: 3px;
+  transition: 1s;
+}
+
+.products li a{
+  text-decoration: none;
+}
+
+.products li p:hover{
+  color: green;
+  border-bottom: 1px solid green;
+  padding-bottom: 2px;
+  transition: 1s;
+}
+
+.headerSvg ul{
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+
+.menu li p{
+  color: gray;
+}
+
+.headerSvg{
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+.headerSvg ul li img{
+  width: 35px;
+  height: 35px;
+}
+
+.footer{
+  width: 100%;
+  height: 200px;
+  background: gray;
+  color: gold;
+}
+
