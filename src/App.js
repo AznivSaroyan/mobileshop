@@ -17,7 +17,7 @@ function App() {
          <nav>
           <ul  className="menu">
             <li className="logo">
-              <p to="/">Mobile shop shop</p>
+              <p to="/">Mobile shop</p>
             </li>
             <li>
               <ul className="products">
