@@ -102,7 +102,7 @@ const Shop = () => {
         // </div>
 
         <div className="shopPage">
-            <div className="toBasket">kjnkjn m</div>
+            <div className="toBasket">to Basket</div>
             <div className="general">jn kjn</div>
         </div>
     )
