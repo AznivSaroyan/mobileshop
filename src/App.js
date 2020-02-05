@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
 
 
 import {
@@ -9,11 +7,28 @@ import {
   Route,
   Link
 } from "react-router-dom"
+import {createBrowserHistory} from 'history';
+
+
+import Home from './Home';
+import Phone from './Phone';
+import Tablet from './Tablet';
+import Accessories from './Accessories';
+import Shop from './Shop';
+import Account from './Account';
+import PhoneDetails from './PhoneDetails';
+
+
+export const history = createBrowserHistory();
+
+
 
 function App() {
   return (
-    <Router>
-      <div className="header">
+    <Router history = {history}>
+
+   
+    <div className="header">
          <nav>
           <ul  className="menu">
             <li className="logo">
@@ -37,79 +52,42 @@ function App() {
             </li>
             <li className="headerSvg">
               <ul>
-                <li> <Link to="/shop"><img className="a" src="https://c7.uihere.com/icons/609/434/345/cart-commerce-buy-shopping-cart-shopping-01bfc781b88867dd92fa180cd6f17ac9.png"/></Link></li>
-                <li> <Link to="/account"><img src="https://sopmed.org/wp-content/uploads/2019/01/account-light-gray.svg"/></Link></li>
+              <li> <Link to="/account">
+              <svg id="headerAccount" aria-hidden="true" focusable="false" data-prefix="far" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path fill="#fff" d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"></path>
+              </svg></Link></li>
+              <li> <Link to="/shop"><svg id="headerShop" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" class="svg-inline--fa fa-shopping-cart fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                        <path fill="#fff" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path>
+                                      </svg></Link></li>
               </ul>
             </li>
           </ul>
         </nav>
-       </div>
-       
-     
-      
+      </div>
+    
       <Switch>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/phone">
-          <Phone />
-        </Route>
-        <Route path="/tablet">
-          <Tablet />
-        </Route>
-        <Route path="/accessories">
-          <Accessories />
-        </Route>
-        <Route path="/shop">
-          <Shop />
-        </Route>
-        <Route path="/account">
-          <Account />
-        </Route>
-      </Switch>
+        <Route path="/home" exact  component={Home}/>
 
+        <Route path="/phone"  component={Phone}/>
+       
+        <Route path="/tablet" component={Tablet}/>
+                  
+        <Route path="/accessories" component={Accessories}/>
+        
+        <Route path="/shop" component={Shop}/>
+          
+        <Route path="/account" component={Account}/>
+
+        <Route path="/phonedetails"  component={PhoneDetails}/>
+      </Switch>
+    
+  
       <div className="footer">
         <h3>Footer</h3>
-     </div>
-    </Router>
+      </div>
     
-  );
-
-
- 
-
-      
-  
-}
-
-
-
-function Home() {
-  return <h1>Home</h1>;
-}
-function Phone() {
-  const [count, setCount] = useState(0);
-  return(
-    <div>
-    <p>Вы кликнули {count} раз</p>
-    <button onClick={() => setCount(count + 1)}>
-      Нажми на меня
-    </button>
-  </div>
-   );
-
-}
-function Tablet() {
-  return <h1>Tablet</h1>;
-}
-function Accessories() {
-  return <h1>Accessories</h1>;
-}
-function Shop() {
-  return <h1>Shop</h1>;
-}
-function Account() {
-  return <h1>Account</h1>;
+    </Router>
+  )
 }
 
 
