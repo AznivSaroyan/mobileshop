@@ -1,0 +1,194 @@
+.home{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeBigImg{
+    width: 100%;
+    margin: 0px;
+}
+
+.offer{
+    width: 100%;
+    margin: 0px;
+    margin-top: 30px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-items: center;
+    background-color: #f8f8f8;   
+}
+
+.new, .sale{
+    width: 30%;
+    margin: 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.newImg, .homeImg{
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 0px 20px #d5d5d5;;
+    transition: all 0.2s linear;
+}
+
+.homeNewPrice{
+    font-size: 16px;
+    font-weight: 800;
+    min-height: 35px;  
+    color:red;        
+}
+
+.homePrice{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    font-size: 16px;
+    font-weight: 800;
+    min-height: 35px; 
+    padding: 5px 15px;  
+}
+
+.homeFirstPrice{
+    text-decoration-line: line-through; 
+    margin-right: 10px;
+    color: gray;
+}
+
+.homeSalePrice{
+    color:red;
+}
+
+.imgGif{
+    position: absolute;
+    z-index: 1;
+    margin-left: 270px;
+    margin-top: -130px;
+    width: 150px;
+} 
+    
+.imgSale{
+    position: absolute;
+    z-index: 1;
+    margin-left: 320px;
+    margin-top: -130px;
+    width: 70px;
+}
+/*///////////////////////////////////////////////////////////////////////////////// Responsive design*/
+
+@media (max-width: 1199px){
+
+    .offer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .new, .sale{
+        width: 25%;
+        position: relative;
+    }
+    .homePrice{
+        width: 100%;
+        padding: 5px;
+    }
+
+    .imgGif{
+        visibility: hidden;    
+    }
+
+    .imgSale{
+        visibility: hidden; 
+    }
+   
+    .homeNewPrice, .homeFirstPrice, .homeSalePrice{
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 991px){
+    .offer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .new, .sale{
+        width: 30%;
+        position: relative;
+    }
+
+    .homeNewPrice, .homeFirstPrice, .homeSalePrice{
+        font-size: 12px;
+    }
+ 
+}
+
+
+@media (max-width: 767px){
+   
+    .offer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .new, .sale{
+        display: flex;
+        flex-wrap: wrap;
+        width: 25%;
+    }
+    .homePrice{
+        width: 100%;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .imgGif{
+        visibility: hidden;
+    }
+
+    .imgSale{
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 576px){
+   
+    .offer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .new, .sale{
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+    }
+    .homePrice{
+        width: 100%;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .imgGif{
+        visibility: hidden;
+    }
+
+    .imgSale{
+        visibility: hidden;
+    }
+}
+
+
+
+

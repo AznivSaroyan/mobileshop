@@ -37,7 +37,8 @@ function App() {
             <li>
               <ul className="products">
                 <li>
-                  <Link to="/home"><p>Home</p></Link>
+                  {/* <Link to="/home"><p>Home</p></Link> */}
+                  <Link to="/"><p>Home</p></Link>
                 </li>
                 <li>
                   <Link to="/phone"><p>Phone</p></Link>
@@ -66,7 +67,8 @@ function App() {
       </div>
     
       <Switch>
-        <Route path="/home" exact  component={Home}/>
+        
+       <Route  exact path="/" component={Home}/>
 
         <Route path="/phone"  component={Phone}/>
        
@@ -80,10 +82,39 @@ function App() {
 
         <Route path="/phonedetails"  component={PhoneDetails}/>
       </Switch>
-    
-  
+
+
+
       <div className="footer">
-        <h3>Footer</h3>
+        <div class="footerList">
+          <div class="footerItem"><svg  height="40px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                  <path fill="#426799" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>
+                                  <div>
+                                  <pre className="phoneName">099 55 55 55</pre> 
+                                  <p className="phoneText"> Աշխատանքային ժամերը ֊ 10:00-21:00 </p></div>
+                                  </div>
+          <div class="footerItem"><svg height="40px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="truck-moving" class="svg-inline--fa fa-truck-moving fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                 <path fill="#4267b2" d="M621.3 237.3l-58.5-58.5c-12-12-28.3-18.7-45.3-18.7H480V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v336c0 44.2 35.8 80 80 80 26.3 0 49.4-12.9 64-32.4 14.6 19.6 37.7 32.4 64 32.4 44.2 0 80-35.8 80-80 0-5.5-.6-10.8-1.6-16h163.2c-1.1 5.2-1.6 10.5-1.6 16 0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16H624c8.8 0 16-7.2 16-16v-85.5c0-17-6.7-33.2-18.7-45.2zM80 432c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm128 0c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm272-224h37.5c4.3 0 8.3 1.7 11.3 4.7l43.3 43.3H480v-48zm48 224c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32z"></path></svg>
+                                 <p>Առաքումը 1 աշխատանքային օրվա ընթացքում 10:00-20:00</p></div>
+          <div class="cardsItem">
+            <img className="cardImg" src={require('../src/img/masterCard.png')} />
+            <img className="cardImg" src={require('../src/img/arca.jpg')} />
+            <img className="cardImg" src={require('../src/img/visa.png')} />
+          </div>
+        </div>
+        <div className="footerList">
+          <div className="footerItem" id="footerItem">
+            <p id="reserved">© 2020 MobileShop LLC. All Rights Reserved.</p>
+          </div>
+          <div  id="media">
+            <a href="https://www.facebook.com/">
+              <img className="fb" src={require('../src/img/fb.png')}/> 
+            </a>
+            <a href="https://www.instagram.com/?hl=ru">
+              <img className="insta" src={require('../src/img/insta.png')}/>
+            </a>
+          </div>
+        </div>
       </div>
     
     </Router>

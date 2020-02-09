@@ -1,0 +1,330 @@
+
+.itemList{
+    width: 100%;
+    margin: 50px auto;
+    padding: 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  
+.item{
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto; 
+    border: 1px solid #ccc;
+    transition: all 0.2s linear;
+}
+  
+.item:hover {
+    box-shadow: 0px 0px 10px #5b88ad;;
+    transition: all 0.2s linear;
+}
+  
+.itemTitle{
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+}
+  
+.itemTitle p{
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-bottom: auto;
+    margin-right: auto;
+    padding: 5px;
+    background: #9fda40;
+    color: #fff;
+    font-size: 12px;
+}
+  
+.itemTitle a svg{
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 22px;
+    height: 22px;
+    fill: #ccc;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+  
+.itemTitle a svg:hover {
+    transform: scale(1.1);
+    transition: all 0.1s linear;
+}
+  
+.itemImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.itemImage img{
+    width: 200px;
+    height: 190px;
+    margin: 5px 0;
+}
+  
+.itemModel, .price, .perMonth, .firstPrice{
+    margin: 0px;
+}
+
+.itemModel p{
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    min-height: 30px; 
+}
+  
+.price p{
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    min-height: 20px;
+}
+  
+.firstPrice p{
+    text-align: center;
+    margin-top: 0px;
+    font-size: 14px;
+    color: red;
+    text-decoration: line-through;
+    min-height: 20px; 
+}
+  
+.perMonth p{
+    text-align: center;
+    color: #005acb;
+    font-size: 12px;
+    min-height: 20px; 
+}
+  
+.perMonth span{
+    font-size: 16px;
+    font-style: 800;
+    color: #333;
+    margin-left: 5px;
+}
+  
+.itemFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+  
+.stars, .pay{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+  
+.stars a svg{
+    width: 20px;
+    height: 20px;
+    fill: gray;
+    cursor: pointer;
+}
+  
+.pay{
+    background: #078fff;
+    height: 22px;
+    width: 30%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+  
+.pay:hover {
+    background: #3ea8ff;
+    transition: all 0.2s linear;
+}
+  
+.pay a svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+    margin-left: auto;
+    color: gray;
+}
+  
+.pay a p{
+    font-size: 16px;
+    color: #fff;
+    margin-left: 3px;
+    margin-right: auto;
+}
+  
+.pay a{
+    text-decoration: none;
+}
+
+.top{
+  position: fixed;
+  /* display: flex;
+  justify-content: end; */
+  margin-left: 1310px;
+  margin-top: 30px;
+  z-index: 9;
+}
+
+.top img{
+  height: 35px;
+  width: 35px;  
+}
+
+/* ///////////////////////////////////////////////////////////////////////////Responsive design */
+
+
+@media (max-width: 1199px){
+    
+    .item{
+      width: 25%;
+    }
+  
+    .headerSvg{
+      padding-left: auto;
+      padding-right: 10px;
+      margin-right: 0px;
+    }
+    
+}
+  
+  
+ @media  (max-width: 991px) {
+   
+    .item{
+      width: 30%;
+    }
+
+    .itemModel, .price, .perMonth, .firstPrice{
+      min-height: 20px;
+      margin: 0px;
+    }
+    
+    .itemModel p{
+      font-size: 14px;
+    }
+    
+    .price p{
+      font-size: 16px;
+    }
+    
+    .firstPrice p{
+      font-size: 12px;
+    }
+    
+    .perMonth p{
+      font-size: 10px;
+    }
+    
+    .perMonth span{
+      font-size: 14px;
+    }
+  
+    .headerSvg{
+      padding-left: auto;
+      padding-right: 10px;
+      margin-right: 0px;
+     }
+     
+} 
+  
+  
+@media (max-width: 767px) {
+    
+    .item{
+      width: 40%;
+    }
+  
+    .itemModel, .price, .perMonth, .firstPrice{
+      margin: 0px;
+      padding: 0px;
+    }
+  
+    .headerSvg{
+      padding-left: auto;
+      padding-right: 20px;
+      margin-right: 0px;
+    }
+
+    .headerSvg ul li a svg{
+      width: 20px;
+      height: 20px;
+    }
+    
+}
+  
+  
+@media (max-width: 576px) {
+  
+    .products li a p{
+      font-size: 14px;
+    }
+   
+    .headerSvg{
+      padding-left: auto;
+      padding-right: 10px;
+      margin-right: 0px;
+    }
+  
+    .headerSvg ul li a svg{
+      width: 15px;
+      height: 15px;
+    }
+   
+    .itemList{
+      width: 100%;
+      margin: 50px 0px;
+      padding: 5px 3px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .item{
+      width: 60%;
+    }
+  
+    .itemModel, .price, .perMonth, .firstPrice{
+      min-height: 5px;
+      margin: 2px;
+    }
+  
+    .itemModel p{
+      margin: 0px;
+    }
+  
+    .price p{
+      margin: 0px;
+    }
+  
+    .perMonth p{
+      margin: 0px;
+    }
+  
+    .firstPrice p{
+      margin: 0px;
+    }
+  
+   .itemImage{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+  
+   .itemImage img{
+    width: 80%;
+    height: auto;
+    margin: 5px 0;
+   }
+}

@@ -1,182 +1,297 @@
-/* .shopPage{
-    margin: 0px;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    background-color: #f5f5f5;
-}
-
-
-.toBasket{
-    width: 70%;
-    margin-right: 20px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #f5f5f5;
-}
-
-
-.information{
+.shopPage{
     width: 100%;
-    margin: 0px;
-    padding: 20px;
-    padding-bottom: 50px;
-    list-style-type: none;
-}
-
-
-.informationTitle{
-    font-size: 24px;
-}
-
-.information li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;  
-}
-
-.nameSurname, .phoneEmail, .cityStreet, .address{
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-.name, .surname, .phone, .email, .city, .community{
-    width: 47%;
-}
-
-
-
-.name, .phone, .city{
-    margin-right: 30px;
-}
-
-.nameInput, .surNameInput, .phoneInput, .emailInput, .homeAddressInput, .homeAddressItem{
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-    outline: none;
-    padding: 0px 10px;
-}
-
-.city select{
-    width: 105%;
-    height: 45px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-    outline: none;
-    padding: 0px 10px;
-    background-color:  #fff;
-}
-.community select{
-    width: 105%;
-    height: 45px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-    outline: none;
-    padding: 0px 10px;
-    background-color:  #fff;
-}
-
-.nameInput:focus {
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-.surNameInput:focus{
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-.phoneInput:focus{
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-.emailInput:focus{
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-.city select:focus{
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-.community select:focus{
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-.homeAddressInput:focus{
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-.notesInput:focus{
-    box-shadow: 0px 0px 8px #9ecbf6;
-}
-
-
-.notes{
-    width: 90%;
-    height: 700px;
-}
-
-
-.general{
-    margin: 0px;
-    margin-bottom: auto;
-    padding: 10px;
-    padding-bottom: 30px;
-    width: 30%;
-    background-color: #fff;
-    border: 1px solid #f5f5f5;
-    cursor: pointer;
-}
-
-.generalRows{
     margin: 0px;
     padding: 0px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
+    background-color: #f8f8f8;
 }
 
-
-.generalRows li{
+.basket, .registration{
+    width: 60%;
+    margin: 30px auto;
+    padding: 15px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0px;
+    flex-direction: column; 
+    background-color: #d6d6d6;
 }
 
- 
-.generalRows li .pay{
-    color: #337af7;
-    text-decoration:  none;
+.basket{
+    margin-top: 40px;
+    margin-bottom: 0px;
 }
 
-
-.generalTytle{
-    width: 100%;
-    margin: 0px;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.generalTytleText{
+.baskedTitle, .title{
+    width: 60%; 
+    padding-left: 15px;
+    font-size: 20px;
+    font-weight: 800;
     color: gray;
 }
 
-.generalTytlePrice{
-    font-size: 20px;
-    color: #000;
+.basketList{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin: 20px;
+}
+
+.basketItem img{
+    height: 170px;
+}
+
+.basketItem{
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.shopModel{
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: auto;
+    padding: 5px;
+    padding-left: 20px;
+    color: #337af7;
+}
+
+.basketPrice{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;  
+}
+
+.shopPrice p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: auto;
+}
+
+.delete{
+    margin-bottom: 5px;
+    margin-top: auto;
+}
+
+.delete a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.delete a:hover{
+    text-decoration: underline;
+    color:gray;
+}
+
+.delete p{
+    text-align: center;
+    font-size: 14px;
+    color:gray;
 }
 
 
-.checkboxRow p{
-    font-size: 12px;
+
+
+
+.radiobuttons ul{
+    list-style-type: none;
 }
 
+.radiobuttons ul li{
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.delete{
+    cursor: pointer;
+}
+.radiobuttons ul li p{
+    color: gray;
+}
+
+.nameSurname, .phoneMail, .address, .house{
+    width: 100%;
+    padding: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameSurname ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nameSurname ul li{
+    width: 100%;
+}
+
+.nameSurname ul li p{
+  padding-left: 10px;
+}
+
+.name, .surname, .phone, .mail, .region, .district{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameSurname ul li input{
+    width: 90%;  
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 0px 10px;
+    background-color: #ddd;
+}
+
+.nameSurname ul li p{
+    color: gray;
+}
+
+
+
+
+
+
+.phoneMail ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.phoneMail ul li{
+    width: 100%;
+}
+
+.phoneMail ul li p{
+  padding-left: 10px;
+}
+
+.phoneMail ul li input{
+    width: 90%;  
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 0px 10px;
+    background-color: #ddd;
+}
+
+.phoneMail ul li p{
+    color: gray;
+}
+
+
+
+
+
+.address ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;   
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.address ul li{
+    width: 100%;
+}
+
+.address ul li p{
+    padding-left: 10px;
+}
+
+.address ul li select{
+    width: 95%;  
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    outline: none;
+}
+
+.address ul li p{
+    color: gray;
+}
+
+.address option{
+    color:gray
+}
+
+.regionItem, .districtItem{
+    color: gray;
+}
+
+
+
+.house{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
+.house p{
+    width: 100%;
+    padding-left: 30px;
+    color: gray;
+
+}
+
+.house input{
+    width: 94%;  
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 0px 10px;
+    background-color: #ddd;
+}
+
+
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px 15px;
+}
+
+.notes p{
+    width: 100%;
+    color: gray; 
+}
+
+.notes textarea{
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    outline: none;
+    padding: 5px 10px;
+    background-color: #ddd;
+}
 
 .shopBotton{
     display: flex;
@@ -185,14 +300,16 @@
     align-items: center;
     width: 100px;
     height: 40px;
-    background-color: #9ecbf6;
+    margin: 20px auto;
+    margin-top: 70px;
+    background-color: #337af7;
     color: #fff;
+    border-radius: 4px;
     transition: 2s;
-   
 }
 
 .shopBotton:hover{
-    background-color: #337af7;
+    background-color: gray;
     transition: 2s;
 }
 
@@ -207,30 +324,80 @@
     width: 20px;
     left: 20px;
 }
-  */
 
-  .shopPage{
-      margin: 0px;
-      padding: 0px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
 
-  }
 
-  .toBasket{
-    background-color:red;
-    width: 70%;
-    margin: 10px;
-    margin-right: 20px;
-    margin-top: 30px;
-    padding: 10px;
-  }
+/*////////////////////////////////////////////////////////////////////////////////Responsive design */
 
-  .general{
-    background-color: blue;
-    width: 30%;
-    margin: 10px;
-    margin-top: 30px;
-    padding: 10px;
-  }
+@media (max-width: 1199px){
+    .notes{
+        margin: 3px;
+    }
+   
+}
+
+
+@media (max-width: 991px){
+    .basketItem img{
+        height: 100px;
+    }
+
+    .shopPrice p{
+        font-size: 14px;
+    }
+
+    .shopModel{
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 767px){
+
+    .basket, .registration{
+        width: 90%;
+    }
+
+    .basketItem img{
+        height: 100px;
+    }
+
+    .shopPrice p{
+        font-size: 14px;
+    }
+
+    .shopModel{
+        font-size: 14px;
+    }
+  
+}
+
+@media (max-width: 576px){
+
+    .basket, .registration{
+        width: 90%;
+    }
+
+    .basketItem{
+        width: 70%;
+    }
+
+    .basketPrice{
+        width: 30%;
+    }
+
+    .basketItem img{
+        height: 100px;
+    }
+
+    .shopPrice p{
+        font-size: 14px;
+    }
+
+    .shopModel{
+        font-size: 14px;
+    }
+ 
+}
+
