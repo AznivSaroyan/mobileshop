@@ -43,6 +43,9 @@ function App() {
                 <li>
                   <Link to="/phone"><p>Phone</p></Link>
                 </li>
+
+
+                
                 <li>
                   <Link to="/tablet"><p>Tablet</p></Link>
                 </li>
