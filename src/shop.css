@@ -1,7 +1,17 @@
+.plus, .minus{
+    cursor: pointer;
+}
+
+.calc{
+    margin-left: 100px;
+}
+
+
 .shopPage{
     width: 100%;
-    margin: 0px;
+    margin:  0px;
     padding: 0px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;  
     background-color: #f8f8f8;
@@ -13,7 +23,7 @@
     padding: 15px;
     display: flex;
     flex-direction: column; 
-    background-color: #d6d6d6;
+    background-color: #fff;
 }
 
 .basket{
@@ -58,6 +68,17 @@
     color: #337af7;
 }
 
+.plusMinus{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.plusMinus p{
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .basketPrice{
     width: 20%;
     display: flex;
@@ -96,27 +117,70 @@
     color:gray;
 }
 
-
-
-
-
-.radiobuttons ul{
-    list-style-type: none;
-}
-
-.radiobuttons ul li{
-    height: 25px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .delete{
     cursor: pointer;
 }
-.radiobuttons ul li p{
+
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
     color: gray;
-}
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
 
 .nameSurname, .phoneMail, .address, .house{
     width: 100%;
@@ -155,17 +219,14 @@
     width: 90%;  
     height: 30px;
     border-radius: 4px;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     outline: none;
     padding: 0px 10px;
-    background-color: #ddd;
 }
 
 .nameSurname ul li p{
     color: gray;
 }
-
-
 
 
 
@@ -192,10 +253,10 @@
     width: 90%;  
     height: 30px;
     border-radius: 4px;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     outline: none;
     padding: 0px 10px;
-    background-color: #ddd;
+    /* background-color: #ddd; */
 }
 
 .phoneMail ul li p{
@@ -205,6 +266,9 @@
 
 
 
+.address ul li select{
+    background-color: #fff;
+}
 
 .address ul{
     width: 100%;
@@ -228,7 +292,7 @@
     width: 95%;  
     height: 35px;
     border-radius: 4px;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     outline: none;
 }
 
@@ -265,10 +329,10 @@
     width: 94%;  
     height: 35px;
     border-radius: 4px;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     outline: none;
     padding: 0px 10px;
-    background-color: #ddd;
+    /* background-color: #ddd; */
 }
 
 
@@ -287,10 +351,10 @@
 
 .notes textarea{
     border-radius: 4px;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
     outline: none;
     padding: 5px 10px;
-    background-color: #ddd;
+    /* background-color: #ddd; */
 }
 
 .shopBotton{
@@ -302,7 +366,7 @@
     height: 40px;
     margin: 20px auto;
     margin-top: 70px;
-    background-color: #337af7;
+    background-color: #2C63E7;
     color: #fff;
     border-radius: 4px;
     transition: 2s;

@@ -1,11 +1,9 @@
 .account{
     width: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 20px 0px;
     display: flex;
     flex-direction: column;  
-    background-color: #f8f8f8;
-    
 }
 
 .accountTitle{
@@ -23,7 +21,7 @@
     flex-direction: row;
     align-items: center;
     list-style-type: none;   
-    background-color: #d6d6d6;  
+    border: 1px solid gray;
 } 
 
 
@@ -39,9 +37,9 @@
     width: 20%;
     margin: 0px;
     padding: 10px;
-    height: 40px;
-     
+    height: 40px;  
 }
+
 
 
 .accountItem ul li span{
@@ -55,7 +53,7 @@
 
 
 .button{
-    background-color: #b6b6b6;
+    background-color: #2C63E7;
     color: #fff;
     padding: 5px;
     cursor: pointer;
@@ -66,7 +64,16 @@
 .button:hover{
     box-shadow: 0px 0px 10px gray;;
     transition: all 0.2s linear;
+}
 
+#buttonItemsLeft{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#buttonItemsRight{
+    display: flex;
+    justify-content: flex-start;
 }
 
 

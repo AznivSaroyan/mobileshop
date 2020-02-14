@@ -3,6 +3,51 @@ body{
     width: 100%;
 }
 
+.itemDetalis{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.itemDetalisTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.detalisImg{
+    width: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.detalisImg img{
+    height: 220px;
+}
+
+.detalisNmaePrice{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+
+
+.pgoneDetalisPrice{
+    height: 60%;
+    margin:0px;
+    padding: 10px;
+}
+
+.detalisButton{
+    height: 20%;
+    margin:0px;
+    padding: 10px;
+}
+
 .detailsTitle{
     color: #363636;
     font-size: 20px;
@@ -10,26 +55,25 @@ body{
     margin-left: 40px;
 }
 
+
 .detalisBottom ul li{
     list-style-type: none;
 }
-.detailsPhone li{
+
+.detailsDevice li{
     list-style-type: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 95%;
-    height: 50px;
-  
-    
-    
+    height: 50px;    
 }
 
-.itemDetalis ul li{
+.itemDetalisButton ul li{
     list-style-type: none;
 }
 
-.detailsName{
+.detalisItem{
     width: 30%;
     height: 100%;
     background-color: #f3f3f3;
@@ -38,7 +82,7 @@ body{
     padding-left: 20px;
 }
 
-.detailsName p{
+.detalisItem p{
     font-size: 14px;
     color: gray;
 }
