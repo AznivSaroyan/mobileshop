@@ -2,17 +2,13 @@ import React from 'react'
 import './account.css';
 import { Link } from 'react-router-dom'
 
-
-
 const salesLast=[
     {
-        idLast: 1,
+        id: 1,
         totalLast: "350.000դ․",
         stateLast: 1
-
     }
 ]
-
 
 const sales = [    
         {
@@ -56,8 +52,8 @@ const sales = [
                             <li><p className="elem"><span className="elem">State:</span>{elem.stateLast}</p></li>
 
                             <li id="buttonItemsLeft"><p className="button" >Cancel</p></li>
-
-                            <li id="buttonItemsRight"><p className="button">View more</p></li>
+                            <li id="buttonItemsRight"><p className="button">
+                            <Link to={`/phonedetails/${elem.id}`}>View more</Link></p></li>
 
                         </ul>
                     </div>
@@ -79,6 +75,8 @@ const sales = [
                             <li id="buttonItemsLeft"><p className="button">Buy again</p></li>
 
                             <li id="buttonItemsRight"><p className="button">View more</p></li>
+                            <Link to={`/phonedetails/${elem.id}`}>View more</Link>
+
                         </ul>
                     </div>
                 )  

@@ -573,7 +573,7 @@ return(
             <ul className="detalisNmaePrice">
                 <li className="detalisName"><p>{product.detalisName}</p></li>
                 <li className="detalisPrice"><p>{product.detalisPrice}</p></li>
-                <li className="detalisPayButton"><a href="javascript:history.back()"><p>Վերադառնալ</p></a></li>
+                <li className="detalisPayButton"><a onClick = { () => props.history.goBack()}><p>Վերադառնալ</p></a></li>
             </ul>
         </div>
         <div className="itemDetalisButton">

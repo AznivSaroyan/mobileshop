@@ -170,7 +170,7 @@ const Phone = () => {
                   <a href=""><svg>{elem.urlStar}</svg></a>
                 </div>
                 <div className="pay">
-                <Link to={'shop/' + elem.id} className="payLink">
+                <Link to={'/shop/' + elem.id} className="payLink">
                 <a href=""><svg>{elem.urllShopSvg}</svg></a>
                 <a href=""><p>Pay</p></a>
               </Link>
