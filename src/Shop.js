@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import './shop.css';
-import { func } from 'prop-types';
+import { Link } from 'react-router-dom'
+import { filter } from 'minimatch';
+// import { func } from 'prop-types';
 // import { EventEmitter } from 'events';
 // import Counter from "react-native-counters";
 // import Feather from 'react-native-vector-icons/Feather';
@@ -180,8 +182,36 @@ import { func } from 'prop-types';
             showPrice: 11900
         }
     ]
-
+    
 const Shop = (props) => {
+    
+
+    const [inputFields, setInputFields] = useState([
+        { firstName: '', lastName: '' }
+      ]);
+   
+   
+  function getValue(){
+    let number = document.getElementById("a").value;
+    // let inputArray = [];
+    // inputArray.push(number);
+    if(number == ""){
+        console.log("aaaaaaaaaaaaa");
+    }
+}
+
+
+
+// const getValue = () => {
+//     // const number = [...inputFields.inputValue];
+  
+// if({inputValue: ""}){
+//         console.log("aaaaaaaaaaaaaa");
+//     }
+// }
+    
+
+
          
     const [number, setNumber] = useState(1)
     const[product1, setProduct] = useState({})
@@ -206,10 +236,6 @@ const Shop = (props) => {
     }
 
     
-
-    
-console.log(price)
-
     return (
 
         <div className="shopPage">
@@ -241,33 +267,43 @@ console.log(price)
                 <div className="title">Առաքման տվյալներ</div>
                 <div className="radiobuttons">
                     <form>
-                        <p>
+                      
                         <label className="container"><p>Առաքում</p>
                             <input name="radio" type="radio" checked />
                             <span className="checkmark"></span>
                         </label>
-                        </p>
-                        <p>
+                        
+                      
                         <label className="container"><p>Կվերցնեմ ինքս</p>
                             <input name="radio" type="radio"  />
                             <span className="checkmark"></span>
                         </label>
-                        </p>
+                       
                     </form>
         
                 </div>
 
+    
+    
+    
+
+
+ {inputFields.map((inputField, index) => (
+ <Fragment key={`${inputField}~${index}`}>
+
+
+
                 <div className="nameSurname">
                     <ul>
-                        <li><p>Անուն *</p><input className="name" type="text"/></li>
-                        <li><p>Ազգանուն *</p><input className="surname" type="text"/></li>
+                        <li><p>Անուն *</p><input id="a"  className="name" type="text"/></li>
+                        <li><p>Ազգանուն *</p><input id="a" className="surname" type="text" /></li>
                     </ul>
                 </div>
 
                 <div className="phoneMail">
                     <ul>
-                        <li><p>Բջջային հեռախոս *</p><input className="phone" type="text"/></li>
-                        <li><p>Էլ. փոստ *</p><input className="mail" type="text"/></li>
+                        <li><p>Բջջային հեռախոս *</p><input id="a" value={inputField.inputValue=""} className="phone" type="text"/></li>
+                        <li><p>Էլ. փոստ *</p><input value={inputField.inputValue=""} className="mail" type="text"/></li>
                     </ul>
                 </div>
 
@@ -305,7 +341,10 @@ console.log(price)
                     <p>Նշումներ</p>
                     <textarea  rows="6" cols="94"></textarea >
                 </div>
-                <div className="shopBotton">
+                </Fragment>
+          ))}
+              
+                <div className="shopBotton" onClick={()=>getValue()}>
                     <svg  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" className="svg-inline--fa fa-shopping-cart fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path></svg>
                     <p>Գնել</p>
                 </div>

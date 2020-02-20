@@ -230,10 +230,11 @@ const items = [
 ]
 
 
-const Phone = () => {
-
+const Accessories= () => {
   
   return( 
+
+    
     <div className="itemList">
       {
         items.map((elem , index) =>
@@ -247,9 +248,7 @@ const Phone = () => {
             </div>
 
             <div className="itemImage">
-              <Link to={'phonedetails/' + elem.id}>
                 <img src={elem.itemImg}/>
-              </Link>
             </div>
 
               
@@ -283,5 +282,5 @@ const Phone = () => {
   );
 }
 
-export default Phone;
+export default Accessories;
 

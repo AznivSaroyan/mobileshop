@@ -370,6 +370,7 @@
     color: #fff;
     border-radius: 4px;
     transition: 2s;
+    cursor: pointer;
 }
 
 .shopBotton:hover{

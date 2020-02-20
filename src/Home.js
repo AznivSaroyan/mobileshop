@@ -1,35 +1,38 @@
 import React from 'react'
 import '../src/home.css'
+import { Link } from 'react-router-dom'
+import './PhoneDetails.css';
+
 
 const newItem = [
     {
-        newPrice: "59,900դր.",
-        newImage: require('../src/img/new.jpg')
+        id: 306,
+        newImage: require('../src/img/Original Samsung Headphone Gear IconX 2018 (Black).png'),
+        newPrice: "99,900դր." 
     }
 ]
 const saleItem = [
-    {
-        salePrice: "244,900դր.",
-        firstPrice: "269,900դր.",
-        saleImage: require('../src/img/sale.jpg')
-
+    {  
+        id: 106,
+        saleImage:  require('../src/img/Apple iPhone XR 64GB (Red).jpg'),
+        salePrice: "359,910դր.",
+        firstPrice: "399,000դր"
     },
-    {
-        salePrice: "4,000դր.",
-        firstPrice: "5,000դր.",
-        saleImage: require('../src/img/cell2.jpg')
-
+    {   
+        id: 107,
+        saleImage: require('../src/img/Samsung Galaxy J2 Core (Gold).jpg'),
+        salePrice: "55,900դր.",
+        firstPrice:  "47,900դր"  
     }
 
 ]
 
 const Home = () => { 
+       
     return (
-        <div className="home">
-            
+        <div className="home">  
             <div><img  className="homeBigImg" src={require('../src/img/homeImg.jpg')} /></div>
             <div className="offer">
-            
                 {
                     newItem.map((elem, index)=>
                         <div className="new" key={index}>
@@ -37,7 +40,11 @@ const Home = () => {
                             <div style={{position: "relative", width: "100%"}}>
                                 <img className="imgGif" src={require('../src/img/newImg.gif')}/>
                             </div>
-                            <img className="newImg" src={elem.newImage}/>
+                            <Link 
+                             
+                                to={`/shop/${elem.id}`}>
+                                <img className="newImg" src={elem.newImage}/>
+                            </Link>
                             <p className="homeNewPrice">{elem.newPrice}</p>
                                 
                         </div>
@@ -47,17 +54,17 @@ const Home = () => {
                 {
                     saleItem.map((elem, index)=>
                         <div  className="sale" key={index}>
-                            
                             <div style={{position: "relative", width: "100%"}}>
-                                <img className="imgSale" src={require('../src/img/sale.png')}/>
+                                    <img className="imgSale" src={require('../src/img/sale.png')}/>
                             </div>
-                                <img className="homeImg" src={elem.saleImage}/>        
+                                <Link to={`/shop/${elem.id}`}>
+                                    <img className="homeImg" src={elem.saleImage}/>   
+                                </Link>     
                             
                             <div className="homePrice">
                                 <p className="homeFirstPrice">Հին գին {elem.firstPrice} </p> 
                                 <p className="homeSalePrice">Նոր գին {elem.salePrice}</p>
                             </div>                    
-
                         </div>
                     )               
                 }

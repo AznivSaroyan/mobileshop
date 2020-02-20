@@ -134,14 +134,15 @@
 .pay{
     background: #078fff;
     height: 22px;
-    width: 30%;
-    padding: 8px;
+    width: 25%;
+    padding: 8px; 
     border-radius: 3px;
     display: flex;
     flex-direction: row;
     align-items: center;
     cursor: pointer;
     transition: all 0.2s linear;
+    position: relative;
 }
   
 .pay:hover {
@@ -149,7 +150,14 @@
     transition: all 0.2s linear;
 }
   
-.pay a svg{
+/* .pay a svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    margin-left: auto;
+    color: gray;
+} */
+.pay svg{
     width: 25px;
     height: 25px;
     margin-right: 4px;
@@ -157,16 +165,23 @@
     color: gray;
 }
   
-.pay a p{
+/* .pay a p{
+    font-size: 16px;
+    color: #fff;
+    margin-left: 4px;
+    margin-right: auto;
+} */
+
+.pay p{
     font-size: 16px;
     color: #fff;
     margin-left: 4px;
     margin-right: auto;
 }
   
-.pay a{
+/* .pay a{
     text-decoration: none;
-}
+} */
 
 .payLink{
     width: 100%;
@@ -176,6 +191,35 @@
     align-items: center;
 }
 
+.pay:focus #payHeart{
+    /* width: 18%;
+    margin-top: 3px;
+    margin-bottom: auto;
+    margin-right: 0px;
+    margin-left: auto;
+    padding: 0px; */
+    /* visibility: visible;*/
+    /* display: block; 
+    z-index: 6; */
+} 
+
+#payHeart{
+    width: 18%;
+    /* margin-top: -9px;
+    margin-bottom: auto;
+    margin-right: -30px;
+    margin-left: 35px;
+    padding: 0px; */
+    /* visibility: hidden; */
+    /* display: none; */
+    position: absolute;
+    z-index: 9;
+}
+
+/* #payHeart:focus{
+    backface-visibility: 
+
+}
 
 /* ///////////////////////////////////////////////////////////////////////////Responsive design */
 

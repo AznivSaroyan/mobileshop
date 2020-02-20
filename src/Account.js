@@ -2,9 +2,11 @@ import React from 'react'
 import './account.css';
 import { Link } from 'react-router-dom'
 
+
 const salesLast=[
     {
-        id: 1,
+        id: 205,
+        idLast: 205,
         totalLast: "350.000դ․",
         stateLast: 1
     }
@@ -39,44 +41,44 @@ const sales = [
     return(
         <div className="account"> 
 
-                <div className="accountTitle"><p>Last sales</p></div>
+                <div className="accountTitle"><p>Վերջին գնումներ</p></div>
                 {
                 salesLast.map((elem, index) =>
                     
                     <div className="accountItem" key={index}>
                         <ul>
-                            <li><p className="elem"><span className="elem">ID:</span>{elem.idLast}</p></li>
+                            <li id="accountId"><p className="elem"><span className="elem">ID:</span>{elem.idLast}</p></li>
 
-                            <li><p className="elem"><span className="elem">Total:</span>{elem.totalLast}</p></li>
+                            <li><p className="elem"><span className="elem">Ընդհանուր:</span>{elem.totalLast}</p></li>
                             
-                            <li><p className="elem"><span className="elem">State:</span>{elem.stateLast}</p></li>
+                            <li><p className="elem"><span className="elem">Կարգավիճակ:</span>{elem.stateLast}</p></li>
 
-                            <li id="buttonItemsLeft"><p className="button" >Cancel</p></li>
-                            <li id="buttonItemsRight"><p className="button">
-                            <Link to={`/phonedetails/${elem.id}`}>View more</Link></p></li>
-
+                            <li className="accountButtons">
+                                <div id="buttonItemsLeft" ><a  className="accountLinks" href="javascript:history.back()"><p className="button" >Չեղարկել</p></a></div>
+                                <div id="buttonItemsRight"><Link className="accountLinks" to={`/phonedetails/${elem.id}`}><p className="button">Տեսնել ավելին</p></Link></div>
+                            </li>
                         </ul>
                     </div>
                 )  
             } 
            
-           <div><p className="accountTitle">Canceled Sales</p></div>
+           <div><p className="accountTitle">Չեղարկված ապրանքներ</p></div>
            {
                 sales.map((elem, index) =>             
 
                     <div className="accountItem" key={index}>
                         <ul>
-                            <li><p className="elem"><span className="elem">ID:</span>{elem.id}</p></li>
+                            <li id="accountId"><p className="elem"><span className="elem">ID:</span>{elem.id}</p></li>
 
-                            <li><p className="elem"><span className="elem">Total:</span>{elem.total}</p></li>
+                            <li><p className="elem"><span className="elem">Ընդհանուր:</span>{elem.total}</p></li>
                             
-                            <li><p className="elem"><span className="elem">State:</span>{elem.state}</p></li>
+                            <li><p className="elem"><span className="elem">Կարգավիճակ:</span>{elem.state}</p></li>
 
-                            <li id="buttonItemsLeft"><p className="button">Buy again</p></li>
+                            <li className="accountButtons"> 
+                                <div id="buttonItemsLeft"><Link className="accountLinks" to={`/shop/${elem.id}`}><p className="button">Գնել  կրկին</p></Link></div>
 
-                            <li id="buttonItemsRight"><p className="button">View more</p></li>
-                            <Link to={`/phonedetails/${elem.id}`}>View more</Link>
-
+                                <div id="buttonItemsRight"><Link className="accountLinks" to={`/phonedetails/${elem.id}`}><p className="button">Տեսնել ավելին</p></Link></div> 
+                            </li>
                         </ul>
                     </div>
                 )  
