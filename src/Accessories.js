@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../src/items.css'
+import '../src/global.css/items.css'
 import { Link } from 'react-router-dom'
 
 

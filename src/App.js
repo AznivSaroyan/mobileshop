@@ -5,7 +5,7 @@ import DynamicScrollToTop from './DynamicScrollToTop'
 import {
   BrowserRouter as Router, 
   Switch, 
-  Route,
+  Route,git config --global credential.helper cache
   Link
 } from "react-router-dom"
 import {createBrowserHistory} from 'history';

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../src/home.css'
+import '../src/global.css/home.css'
 import { Link } from 'react-router-dom'
 import './PhoneDetails.css';
 

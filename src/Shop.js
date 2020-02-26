@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import './shop.css';
+import './global.css/shop.css';
 import { Link } from 'react-router-dom'
 import { filter } from 'minimatch';
 // import { func } from 'prop-types';
