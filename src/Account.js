@@ -1,6 +1,6 @@
-import React from 'react'
-import './global.css/account.css';
-import { Link } from 'react-router-dom'
+import React from 'react';
+import '../src/globalCss/account.css';
+import { Link } from 'react-router-dom';
 
 
 const salesLast=[
@@ -11,7 +11,6 @@ const salesLast=[
         stateLast: 1
     }
 ]
-
 const sales = [    
         {
             id: 101,
@@ -54,8 +53,16 @@ const sales = [
                             <li><p className="elem"><span className="elem">Կարգավիճակ:</span>{elem.stateLast}</p></li>
 
                             <li className="accountButtons">
-                                <div id="buttonItemsLeft" ><a  className="accountLinks" href="javascript:history.back()"><p className="button" >Չեղարկել</p></a></div>
-                                <div id="buttonItemsRight"><Link className="accountLinks" to={`/phonedetails/${elem.id}`}><p className="button">Տեսնել ավելին</p></Link></div>
+                                <div id="buttonItemsLeft" >
+                                    <a  className="accountLinks" href="javascript:history.back()">
+                                        <p className="button" >Չեղարկել</p>
+                                    </a>
+                                </div>
+                                <div id="buttonItemsRight">
+                                    <Link className="accountLinks" to={`/phonedetails/${elem.id}`}>
+                                        <p className="button">Տեսնել ավելին</p>
+                                    </Link>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -75,22 +82,24 @@ const sales = [
                             <li><p className="elem"><span className="elem">Կարգավիճակ:</span>{elem.state}</p></li>
 
                             <li className="accountButtons"> 
-                                <div id="buttonItemsLeft"><Link className="accountLinks" to={`/shop/${elem.id}`}><p className="button">Գնել  կրկին</p></Link></div>
+                                <div id="buttonItemsLeft">
+                                    <Link className="accountLinks" to={`/shop/${elem.id}`}>
+                                        <p className="button">Գնել  կրկին</p>
+                                    </Link>
+                                </div>
 
-                                <div id="buttonItemsRight"><Link className="accountLinks" to={`/phonedetails/${elem.id}`}><p className="button">Տեսնել ավելին</p></Link></div> 
+                                <div id="buttonItemsRight">
+                                    <Link className="accountLinks" to={`/phonedetails/${elem.id}`}>
+                                        <p className="button">Տեսնել ավելին</p>
+                                    </Link>
+                                </div> 
                             </li>
                         </ul>
                     </div>
                 )  
             }        
-             
-        </div>  
-                      
-    );
-   
+        </div>                  
+    );  
 } 
-
-
-
 
 export default Account;
