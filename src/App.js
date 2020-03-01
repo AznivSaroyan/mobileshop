@@ -30,6 +30,7 @@ function App() {
     // <Router history = {history}>
     <Router>
       <DynamicScrollToTop/>
+      <ScrollTop />
       <div className="header">
         <nav>
           <ul  className="menu">
@@ -64,11 +65,9 @@ function App() {
                   </Link>
                 </li>
                 <li> 
-                  <Link to="/shop">
-                    <svg id="headerShop" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" className="svg-inline--fa fa-shopping-cart fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path fill="#fff" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path>
-                    </svg>
-                  </Link>
+                  <svg id="headerShop" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" className="svg-inline--fa fa-shopping-cart fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="#fff" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path>
+                  </svg>
                 </li>
               </ul>
             </li>
@@ -103,15 +102,18 @@ function App() {
               <path fill="#d5d5d5" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
             </svg>
             <div>
-              <p className="phoneText"> Աշխատանքային ժամերը ֊ 10:00-21:00 </p>
-              <pre className="phoneName">099 55 55 55</pre> 
+              <p className="phoneText">Աշխատանքային ժամերը ֊ 10:00-21:00</p>
+              <p className="phoneText"> 099 55 55 55</p>
             </div>
           </div>
-          <div id="footerItem2" className="footerItem">
+          <div className="footerItem" >
             <svg height="40px" className="homeCar" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="truck-moving" className="svg-inline--fa fa-truck-moving fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
               <path fill="#d5d5d5" d="M621.3 237.3l-58.5-58.5c-12-12-28.3-18.7-45.3-18.7H480V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v336c0 44.2 35.8 80 80 80 26.3 0 49.4-12.9 64-32.4 14.6 19.6 37.7 32.4 64 32.4 44.2 0 80-35.8 80-80 0-5.5-.6-10.8-1.6-16h163.2c-1.1 5.2-1.6 10.5-1.6 16 0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16H624c8.8 0 16-7.2 16-16v-85.5c0-17-6.7-33.2-18.7-45.2zM80 432c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm128 0c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm272-224h37.5c4.3 0 8.3 1.7 11.3 4.7l43.3 43.3H480v-48zm48 224c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32z"></path>
             </svg>
-            <p className="phoneText">Առաքումը 1 աշխատանքային օրվա ընթացքում 10:00-20:00</p>
+            <div>
+              <p className="phoneText">Առաքումը 1 աշխատանքային օրվա ընթացքում</p>
+              <p className="phoneText">10:00-20:00</p>
+            </div>
           </div>
           <div className="cardsItem">
             <img className="cardImg" src={require('../src/img/masterCard.png')} />
@@ -121,10 +123,10 @@ function App() {
         </div>
 
         <div className="footerList">
-          <div className="footerItem" id="footerItem">
-            <p id="reserved">© 2020 MobileShop LLC. All Rights Reserved.</p>
+          <div className="footerItem">
+            <p className="reserved">© 2020 MobileShop LLC. All Rights Reserved.</p>
           </div>
-          <div  id="media">
+          <div  className="media">
             <a href="https://www.facebook.com/" target="blank">
               <img className="fb" src={require('../src/img/fb.png')}/> 
             </a>
@@ -135,7 +137,6 @@ function App() {
         </div>
       </div>
      
-      <ScrollTop />
     </Router>
   )
 }

@@ -13,7 +13,7 @@ export default class Index extends React.Component {
            AnimationDuration={500}
            ContainerClassName='ScrollUpButton__Container'
            TransitionClassName='ScrollUpButton__Toggled'
-           style={{}}
+           style={{zIndex: "9"}}
            ToggledStyle={{}}
           />
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './DynamicScrollToTop';
+import '../src/globalCss/PhoneDetails.css';
 // import { EventEmitter } from 'events';
 // import { Link } from 'react-router-dom'
 
@@ -632,7 +633,7 @@ const PhoneDetails = (props) => {
     const[product, setProduct] = useState({})
 
     useEffect(() => {
-        const data = items1.find(elem => elem.id === parseInt(props.match.params.id)) 
+        const data = items1.find(product => product.id === parseInt(props.match.params.id)) 
         setProduct(data)
     }, [])
 

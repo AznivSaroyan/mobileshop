@@ -1,6 +1,7 @@
 
 .itemList{
     margin: 0px;
+    padding-top: 25px;
     padding:  50px auto;
     display: flex;
     flex-wrap: wrap;
@@ -8,15 +9,12 @@
 }
   
 .item{
-    width: 24.1%;
-    display: flex;
-    flex-direction: column;
-    margin: 5px; 
+    width: 22%;
+    margin: 1.4%; 
     margin-top: 40px;
     margin-bottom: 30px;
     border: 1px solid #ccc;
-    transition: all 0.2s linear;
-    
+    transition: all 0.2s linear;  
 }
   
 .item:hover {
@@ -150,13 +148,13 @@
     transition: all 0.2s linear;
 }
   
-/* .pay a svg{
+.pay a svg{
     width: 25px;
     height: 25px;
     margin-right: 4px;
     margin-left: auto;
     color: gray;
-} */
+}
 .pay svg{
     width: 25px;
     height: 25px;
@@ -165,12 +163,12 @@
     color: gray;
 }
   
-/* .pay a p{
+.pay a p{
     font-size: 16px;
     color: #fff;
     margin-left: 4px;
     margin-right: auto;
-} */
+}
 
 .pay p{
     font-size: 16px;
@@ -179,9 +177,9 @@
     margin-right: auto;
 }
   
-/* .pay a{
+.pay a{
     text-decoration: none;
-} */
+}
 
 .payLink{
     width: 100%;
@@ -189,205 +187,63 @@
     justify-content: space-between;
     justify-content: center;
     align-items: center;
-}
-
-.pay:focus #payHeart{
-    /* width: 18%;
-    margin-top: 3px;
-    margin-bottom: auto;
-    margin-right: 0px;
-    margin-left: auto;
-    padding: 0px; */
-    /* visibility: visible;*/
-    /* display: block; 
-    z-index: 6; */
 } 
-
-#payHeart{
-    width: 18%;
-    /* margin-top: -9px;
-    margin-bottom: auto;
-    margin-right: -30px;
-    margin-left: 35px;
-    padding: 0px; */
-    /* visibility: hidden; */
-    /* display: none; */
-    position: absolute;
-    z-index: 9;
-}
-
-/* #payHeart:focus{
-    backface-visibility: 
-
-}
 
 /* ///////////////////////////////////////////////////////////////////////////Responsive design */
 
-
 @media (max-width: 1199px){
-
-    .itemList{
-        
-        padding:  2%;
-    }
-    
-    .item{
-      width: 23.7%;
-    }
   
-    .headerSvg{
-      padding-left: auto;
-      padding-right: 10px;
-      margin-right: 0px;
-    }
+  .item{
+    width: 30%;
+    margin: 1.56%; 
+  } 
+  .itemList{
+    padding-top: 45px;
+  }
     
 }
   
-  
- @media  (max-width: 991px) {
-    .itemList{
-        padding:  6%;
-    }
-    
-    .item{
-      width: 48%;
-    }
+@media  (max-width: 991px) {
+  .item{
+    width: 30%;
+    margin: 1.53%; 
+  }
 
-    .itemModel, .price, .perMonth, .firstPrice{
-      min-height: 20px;
-      margin: 0px;
-    }
-    
-    .itemModel p{
-      font-size: 14px;
-    }
-    
-    .price p{
-      font-size: 16px;
-    }
-    
-    .firstPrice p{
-      font-size: 16px;
-    }
-    
-    .perMonth p{
-      font-size: 10px;
-    }
-    
-    .perMonth span{
-      font-size: 14px;
-    }
-  
-    .headerSvg{
-      padding-left: auto;
-      padding-right: 10px;
-      margin-right: 0px;
-     }
-     
+  .itemList{
+    padding-top: 45px;
+  }
+
 } 
   
   
 @media (max-width: 767px) {
 
-    .itemList{
-        padding:  50px;
-    }
-    
-    .item{
-      width: 47.5%;
-    }
-  
-    .itemModel, .price, .perMonth, .firstPrice{
-      margin: 0px;
-      padding: 0px;
-    }
-  
-    .headerSvg{
-      padding-left: auto;
-      padding-right: 20px;
-      margin-right: 0px;
-    }
+  .item{
+    width: 50%;
+    margin: 25%; 
+    margin-top: 10px;
+    margin-bottom: 10px; 
+  }
 
-    .headerSvg ul li a svg{
-      width: 20px;
-      height: 20px;
-    }
+    
+  .itemList{
+    padding-top:  60px;
+  }
     
 }
   
-  
 @media (max-width: 576px) {
 
+  .item{
+    width: 60%;
+    margin: 20%; 
+    margin-top: 10px;
+    margin-bottom: 10px; 
+  }
+
     
-    .itemList{
-        padding:  50px;
-    }
-        
-    .item{
-        width: 40%;
-    }
-  
-    .products li a p{
-      font-size: 14px;
-    }
-   
-    .headerSvg{
-      padding-left: auto;
-      padding-right: 10px;
-      margin-right: 0px;
-    }
-  
-    .headerSvg ul li a svg{
-      width: 15px;
-      height: 15px;
-    }
-   
-    .itemList{
-      width: 100%;
-      margin: 50px 0px;
-      padding: 5px 3px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .item{
-      width: 60%;
-    }
-  
-    .itemModel, .price, .perMonth, .firstPrice{
-      min-height: 5px;
-      margin: 2px;
-    }
-  
-    .itemModel p{
-      margin: 0px;
-    }
-  
-    .price p{
-      margin: 0px;
-    }
-  
-    .perMonth p{
-      margin: 0px;
-    }
-  
-    .firstPrice p{
-      margin: 0px;
-    }
-  
-   .itemImage{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-  
-   .itemImage img{
-    width: 80%;
-    height: auto;
-    margin: 5px 0;
-   }
+  .itemList{
+    padding-top:  60px;
+  }
+          
 }

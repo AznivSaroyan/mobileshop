@@ -7,30 +7,30 @@ const salesLast=[
     {
         id: 205,
         idLast: 205,
-        totalLast: "350.000դ․",
+        totalLast: "95.900դ․",
         stateLast: 1
     }
 ]
 const sales = [    
         {
             id: 101,
-            total: "11.000դ․",
+            total: "829.000դ․",
             state: 11.000
         },
         {
             id: 204,
-            total: "380.000դ․",
+            total: "337.900դ․",
             state: 380.000
 
         },
         {
             id: 205,
-            total: "5.000դ․",
+            total: "59.900դ․",
             state: 25
         },
         {
             id: 105,
-            total: "35.000դ․",
+            total: "349.000դ․",
             state: 5
         },
     ]

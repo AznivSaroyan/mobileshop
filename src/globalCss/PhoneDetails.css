@@ -35,19 +35,6 @@ body{
 }
 
 
-
-/* .phoneDetalisPrice{
-    height: 60%;
-    margin:0px;
-    padding: 10px;
-}
-
-.detalisButton{
-    height: 20%;
-    margin:0px;
-    padding: 10px;
-} */
-
 .detailsTitle{
     color: #363636;
     font-size: 20px;
@@ -73,8 +60,13 @@ body{
     list-style-type: none;
 }
 
-.detalisPayButton{
+.goBack{
     cursor: pointer;
+    width: 120px;
+}
+
+.goBack p{
+    margin-bottom: 0px;
 }
 
 .detalisItem{

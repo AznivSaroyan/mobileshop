@@ -145,8 +145,8 @@ const Tablet = () =>{
               </div>
               <div className="pay">
                 <Link to={'shop/' + elem.id} className="payLink">
-                  <a href=""><svg>{elem.urllShopSvg}</svg></a>
-                  <a href=""><p>Pay</p></a>
+                  <svg>{elem.urllShopSvg}</svg>
+                  <p>Pay</p>
                 </Link>
               </div>
             </div>
