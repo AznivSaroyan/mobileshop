@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './DynamicScrollToTop';
 import '../src/globalCss/PhoneDetails.css';
-// import { EventEmitter } from 'events';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -641,11 +640,11 @@ const PhoneDetails = (props) => {
 return(
     <div className="itemDetalis">
         <div className="itemDetalisTop">
-            <div className="detalisImg"><img src={product.detalisImg}/></div>
-            <ul className="detalisNmaePrice">
+            <div className="detalisImg"><Link to={'shop/'}><img src={product.detalisImg}/></Link></div>
+            <ul className="detalisNamePrice">
                 <li className="detalisName"><p>{product.detalisName}</p></li>
                 <li className="detalisPrice"><p>{product.detalisPrice}</p></li>
-                <li className="detalisPayButton"><a onClick = { () => props.history.goBack()}><p>Վերադառնալ</p></a></li>
+                <li><a onClick = { () => props.history.goBack()}><p className="goBack">Վերադառնալ</p></a></li>
             </ul>
         </div>
         <div className="itemDetalisButton">
@@ -754,7 +753,7 @@ return(
                             <div  className="detalisItem"><p>Ինտերնետի հասանելիություն</p></div>
                             <div className="detailsProperties"><p>{product.internetAccess}</p></div>
                         </li>
-                        <li>
+                        <li id="detalisItem">
                             <div  className="detalisItem"><p>4G LTE Ցանցի տիրույթ</p></div>
                             <div className="detailsProperties"><p>{product.fourGLTENetworkDomain}</p></div>
                         </li>

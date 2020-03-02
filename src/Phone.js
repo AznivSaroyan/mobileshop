@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../src/globalCss/items.css';
 import { Link } from 'react-router-dom';
 

@@ -1,187 +1,164 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import '../src/globalCss/shop.css';
-import { Link } from 'react-router-dom'
-import { filter } from 'minimatch';
-// import { func } from 'prop-types';
-// import { EventEmitter } from 'events';
-// import Counter from "react-native-counters";
-// import Feather from 'react-native-vector-icons/Feather';
 
-
-    const shops = [
-        {
-            id: 101,
-            showName:"iPhone 11 Pro Max 256GB Silver",
-            showImg: require('../src/img/iPhone 11 Pro Max 256GB Silver.jpg'),
-            showPrice: 829000
-        },
-        {
-            id: 102,
-            showName: "Phone 11 Pro Max 64GB Gold",
-            showImg: require('../src/img/Phone 11 Pro Max 64GB Gold.jpg'),
-            showPrice: 739900
-
-        },
-        {
-            id: 103,
-            showName:"Apple iPhone X 256GB (Space Grey).jpg",
-            showImg: require('../src/img/Apple iPhone X 256GB (Space Grey).jpg'),
-            showPrice: 600000
-
-
-        },
-        {
-            id: 104,
-            showName: "iPhone 11 256GB (White)",
-            showImg: require('../src/img/iPhone 11 256GB (White).jpg'),
-            showPrice: 459900
-        },
-        {
-            id: 105,
-            showName:"Samsung Galaxy S10e (Prism Black)",
-            showImg: require('../src/img/Samsung Galaxy S10e (Prism Black).jpg'),
-            showPrice: 300900
-
-        },
-        {
-            id: 106,
-            showName: "Apple iPhone XR 64GB (Red)",
-            showImg: require('../src/img/Apple iPhone XR 64GB (Red).jpg'),
-            showPrice: 359910
-        },
-        {
-            id: 107,
-            showName: "Samsung Galaxy J2 Core (Gold)",
-            showImg: require('../src/img/Samsung Galaxy J2 Core (Gold).jpg'),
-            showPrice: 55.900
-        },
-        {
-            id: 201,
-            showName:"iPad Pro 12.9 Wi-Fi + Cellular 64GB (Space Grey)",
-            showImg: require('../src/img/iPad Pro 12.9 Wi-Fi + Cellular 64GB (Space Grey).jpg'),
-            showPrice: 699900
-        },
-        {
-            id: 202,
-            showName: "iPad Pro 11 Wi-Fi + Cellular 64GB (Silver)",
-            showImg: require('../src/img/iPad Pro 11 Wi-Fi + Cellular 64GB (Silver).jpg'),
-            showPrice: 559900
-
-        },
-        {
-            id: 203,
-            showName:"Apple iPad Pro 12.9 Wi-Fi 64 GB (Gold)",
-            showImg: require('../src/img/Apple iPad Pro 12.9 Wi-Fi 64 GB (Gold).jpg'),
-            showPrice: 429900
-
-
-        },
-        {
-            id: 204,
-            showName: "iPad mini 5 Wi-Fi + Cellular 64GB (Gold)",
-            showImg: require('../src/img/iPad mini 5 Wi-Fi + Cellular 64GB (Gold).jpg'),
-            showPrice: 337900
-        },
-        {
-            id: 205,
-            showName:"Samsung Galaxy Tab A 8.0 (Black)",
-            showImg: require('../src/img/Samsung Galaxy Tab A 8.0 (Black).jpg'),
-            showPrice: 95900
-
-        },
-        {
-            id: 206,
-            showName: "Prestigio WIZE 3171 3G (Black)",
-            showImg: require('../src/img/Prestigio WIZE 3171 3G (Black).jpg'),
-            showPrice: 50900
-        },
-        {
-            id: 301,
-            showName:"Headphone JBL T600 (Black)",
-            showImg: require('../src/img/Headphone JBL T600 (Black).jpg'),
-            showPrice: 64900
-        },
-        {
-            id: 302,
-            showName: "Headphone JBL T600 (Pink)",
-            showImg: require('../src/img/Headphone JBL T600 (Pink).jpg'),
-            showPrice: 64900
-
-        },
-        {
-            id: 303,
-            showName:"Headphone JBL T205BT (Black).jpg",
-            showImg: require('../src/img/Headphone JBL T205BT (Black).jpg'),
-            showPrice: 24900
-
-
-        },
-        {
-            id: 304,
-            showName: "Headphone JBL LIVE 200BT (Red)",
-            showImg: require('../src/img/Headphone JBL LIVE 200BT (Red).jpg'),
-            showPrice: 39900
-        },
-        {
-            id: 305,
-            showName:"Speaker JBL Boombox Portable Bluetooth speaker (Black)",
-            showImg: require('../src/img/Speaker JBL Boombox Portable Bluetooth speaker (Black).jpg'),
-            showPrice: 249900
-
-        },
-        {
-            id: 306,
-            showName: "Original Samsung Headphone Gear IconX 2018 (Black)",
-            showImg: require('../src/img/Original Samsung Headphone Gear IconX 2018 (Black).png'),
-            showPrice: 99900
-        },
-        {
-            id: 307,
-            showName: "Celly Case Soft Samsung G965 Matt (Black)",
-            showImg: require('../src/img/Celly Case Soft Samsung G965 Matt (Black).jpg'),
-            showPrice: 3900
-        },
-        {
-            id: 308,
-            showName:"SBS Case Skinny Cover iPhone XS Max -TESKINIP65T Transparent",
-            showImg: require('../src/img/SBS Case Skinny Cover iPhone XS Max -TESKINIP65T Transparent.jpg'),
-            showPrice: 3500
-        },
-        {
-            id: 309,
-            showName: "BS Case Glue iPhone XR -TECOVGLUEIP61R (Red)",
-            showImg: require('../src/img/SBS Case Glue iPhone XR -TECOVGLUEIP61R (Red).jpg'),
-            showPrice: 5000
-
-        },
-        {
-            id: 310,
-            showName:"SBS Case Polo Cover iPhone XR -TEPOLOIP61B (Blue).jpg",
-            showImg: require('../src/img/SBS Case Polo Cover iPhone XR -TEPOLOIP61B (Blue).jpg'),
-            showPrice: 5000
-
-
-        },
-        {
-            id: 311,
-            showName: "Remax Battery bank 'Grenade' 'RPL-28' 5000 mAh Olive",
-            showImg: require('../src/img/Remax Battery bank "Grenade" "RPL-28" 5000 mAh Olive.jpg'),
-            showPrice: 7000
-        },
-        {
-            id: 312,
-            showName:"Acme Charger Car CH101 only car 1A-504827 (Black)",
-            showImg: require('../src/img/Acme Charger Car CH101 only car 1A-504827 (Black).jpg'),
-            showPrice: 2500
-
-        },
-        {
-            id: 313,
-            showName: "Celly Charger Wireless ABK 1A (Black)",
-            showImg: require('../src/img/Celly Charger Wireless ABK 1A (Black).jpg'),
-            showPrice: 11900
-        }
-    ]
+const shops = [
+    {
+        id: 101,
+        showName:"iPhone 11 Pro Max 256GB Silver",
+        showImg: require('../src/img/iPhone 11 Pro Max 256GB Silver.jpg'),
+        showPrice: 829000
+    },
+    {
+        id: 102,
+        showName: "Phone 11 Pro Max 64GB Gold",
+        showImg: require('../src/img/Phone 11 Pro Max 64GB Gold.jpg'),
+        showPrice: 739900
+    },
+    {
+        id: 103,
+        showName:"Apple iPhone X 256GB (Space Grey).jpg",
+        showImg: require('../src/img/Apple iPhone X 256GB (Space Grey).jpg'),
+        showPrice: 600000
+    },
+    {
+        id: 104,
+        showName: "iPhone 11 256GB (White)",
+        showImg: require('../src/img/iPhone 11 256GB (White).jpg'),
+        showPrice: 459900
+    },
+    {
+        id: 105,
+        showName:"Samsung Galaxy S10e (Prism Black)",
+        showImg: require('../src/img/Samsung Galaxy S10e (Prism Black).jpg'),
+        showPrice: 300900
+    },
+    {
+        id: 106,
+        showName: "Apple iPhone XR 64GB (Red)",
+        showImg: require('../src/img/Apple iPhone XR 64GB (Red).jpg'),
+        showPrice: 359910
+    },
+    {
+        id: 107,
+        showName: "Samsung Galaxy J2 Core (Gold)",
+        showImg: require('../src/img/Samsung Galaxy J2 Core (Gold).jpg'),
+        showPrice: 55.900
+    },
+    {
+        id: 201,
+        showName:"iPad Pro 12.9 Wi-Fi + Cellular 64GB (Space Grey)",
+        showImg: require('../src/img/iPad Pro 12.9 Wi-Fi + Cellular 64GB (Space Grey).jpg'),
+        showPrice: 699900
+    },
+    {
+        id: 202,
+        showName: "iPad Pro 11 Wi-Fi + Cellular 64GB (Silver)",
+        showImg: require('../src/img/iPad Pro 11 Wi-Fi + Cellular 64GB (Silver).jpg'),
+        showPrice: 559900
+    },
+    {
+        id: 203,
+        showName:"Apple iPad Pro 12.9 Wi-Fi 64 GB (Gold)",
+        showImg: require('../src/img/Apple iPad Pro 12.9 Wi-Fi 64 GB (Gold).jpg'),
+        showPrice: 429900
+    },
+    {
+        id: 204,
+        showName: "iPad mini 5 Wi-Fi + Cellular 64GB (Gold)",
+        showImg: require('../src/img/iPad mini 5 Wi-Fi + Cellular 64GB (Gold).jpg'),
+        showPrice: 337900
+    },
+    {
+        id: 205,
+        showName:"Samsung Galaxy Tab A 8.0 (Black)",
+        showImg: require('../src/img/Samsung Galaxy Tab A 8.0 (Black).jpg'),
+        showPrice: 95900
+    },
+    {
+        id: 206,
+        showName: "Prestigio WIZE 3171 3G (Black)",
+        showImg: require('../src/img/Prestigio WIZE 3171 3G (Black).jpg'),
+        showPrice: 50900
+    },
+    {
+        id: 301,
+        showName:"Headphone JBL T600 (Black)",
+        showImg: require('../src/img/Headphone JBL T600 (Black).jpg'),
+        showPrice: 64900
+    },
+    {
+        id: 302,
+        showName: "Headphone JBL T600 (Pink)",
+        showImg: require('../src/img/Headphone JBL T600 (Pink).jpg'),
+        showPrice: 64900
+    },
+    {
+        id: 303,
+        showName:"Headphone JBL T205BT (Black).jpg",
+        showImg: require('../src/img/Headphone JBL T205BT (Black).jpg'),
+        showPrice: 24900
+    },
+    {
+        id: 304,
+        showName: "Headphone JBL LIVE 200BT (Red)",
+        showImg: require('../src/img/Headphone JBL LIVE 200BT (Red).jpg'),
+        showPrice: 39900
+    },
+    {
+        id: 305,
+        showName:"Speaker JBL Boombox Portable Bluetooth speaker (Black)",
+        showImg: require('../src/img/Speaker JBL Boombox Portable Bluetooth speaker (Black).jpg'),
+        showPrice: 249900
+    },
+    {
+        id: 306,
+        showName: "Original Samsung Headphone Gear IconX 2018 (Black)",
+        showImg: require('../src/img/Original Samsung Headphone Gear IconX 2018 (Black).png'),
+        showPrice: 99900
+    },
+    {
+        id: 307,
+        showName: "Celly Case Soft Samsung G965 Matt (Black)",
+        showImg: require('../src/img/Celly Case Soft Samsung G965 Matt (Black).jpg'),
+        showPrice: 3900
+    },
+    {
+        id: 308,
+        showName:"SBS Case Skinny Cover iPhone XS Max -TESKINIP65T Transparent",
+        showImg: require('../src/img/SBS Case Skinny Cover iPhone XS Max -TESKINIP65T Transparent.jpg'),
+        showPrice: 3500
+    },
+    {
+        id: 309,
+        showName: "BS Case Glue iPhone XR -TECOVGLUEIP61R (Red)",
+        showImg: require('../src/img/SBS Case Glue iPhone XR -TECOVGLUEIP61R (Red).jpg'),
+        showPrice: 5000
+    },
+    {
+        id: 310,
+        showName:"SBS Case Polo Cover iPhone XR -TEPOLOIP61B (Blue).jpg",
+        showImg: require('../src/img/SBS Case Polo Cover iPhone XR -TEPOLOIP61B (Blue).jpg'),
+        showPrice: 5000
+    },
+    {
+        id: 311,
+        showName: "Remax Battery bank 'Grenade' 'RPL-28' 5000 mAh Olive",
+        showImg: require('../src/img/Remax Battery bank "Grenade" "RPL-28" 5000 mAh Olive.jpg'),
+        showPrice: 7000
+    },
+    {
+        id: 312,
+        showName:"Acme Charger Car CH101 only car 1A-504827 (Black)",
+        showImg: require('../src/img/Acme Charger Car CH101 only car 1A-504827 (Black).jpg'),
+        showPrice: 2500
+    },
+    {
+        id: 313,
+        showName: "Celly Charger Wireless ABK 1A (Black)",
+        showImg: require('../src/img/Celly Charger Wireless ABK 1A (Black).jpg'),
+        showPrice: 11900
+    }
+]
     
 const Shop = (props) => {
     
@@ -227,8 +204,7 @@ const Shop = (props) => {
                        
                         <div className="shopModel">{ product1.showName}</div>
                     </div>
-                    <div  className="basky
-                    etPrice">
+                    <div  className="baskyetPrice">
                         <div className="shopPrice"><p>{price ? price : product1.showPrice}</p></div>
                         <div className="plusMinus"> 
                             <p onClick = {() => minus() }>-</p>
@@ -261,9 +237,6 @@ const Shop = (props) => {
                 </div>
 
     
-    
-    
-
 
  {inputFields.map((inputField, index) => (
  <Fragment key={`${inputField}~${index}`}>

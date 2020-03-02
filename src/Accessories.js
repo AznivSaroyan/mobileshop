@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../src/globalCss/items.css';
 import { Link } from 'react-router-dom';
 
@@ -232,7 +232,7 @@ const Accessories= () => {
             </div>
 
             <div className="itemImage">
-                <img src={elem.url}/>
+                <img src={elem.url} alt=""/>
             </div>
 
               
