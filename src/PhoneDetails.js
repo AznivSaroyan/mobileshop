@@ -640,7 +640,7 @@ const PhoneDetails = (props) => {
 return(
     <div className="itemDetalis">
         <div className="itemDetalisTop">
-            <div className="detalisImg"><Link to={'shop/'}><img src={product.detalisImg}/></Link></div>
+            <div className="detalisImg"><Link><img src={product.detalisImg}/></Link></div>
             <ul className="detalisNamePrice">
                 <li className="detalisName"><p>{product.detalisName}</p></li>
                 <li className="detalisPrice"><p>{product.detalisPrice}</p></li>
